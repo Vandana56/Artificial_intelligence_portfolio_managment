@@ -11,3 +11,4 @@ Uses live Yahoo data; falls back to synthetic data if offline.
     backend/risk.py         Vol, Sharpe, VaR, CVaR, drawdown
     backend/models.py       XGBoost forecaster + KMeans risk tiers
     backend/optimizer.py    Markowitz optimiser + frontier
+# Artificial_intelligence_portfolio_managment
