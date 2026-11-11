@@ -1,5 +1,5 @@
 # AI Portfolio Management System
-
+https://artificialintelligenceportfoliomanagment-e96eglscqrexymihbkvnt.streamlit.app
 An interactive web application that helps investors analyse a stock portfolio, understand its risk, forecast short-term price direction using machine learning, and find a better allocation of their money.
 
 Built with **Python** and **Streamlit**, with a clean separation between the frontend (`app.py`) and the analysis logic (`backend/`).
@@ -70,17 +70,17 @@ Other highlights:
 ## Project Structure
 
 ai_portfolio/
-├── app.py                # Streamlit frontend (UI and tabs)
-├── backend/
-│   ├── __init__.py
-│   ├── data_loader.py    # Fetches and prepares stock data
-│   ├── models.py         # Machine learning forecasting model
-│   ├── risk.py           # Risk metrics (Sharpe, VaR, drawdown)
-│   ├── optimizer.py      # Portfolio allocation optimizer
-│   └── service.py        # run_analysis: connects backend to frontend
-├── requirements.txt      # Python dependencies
-├── .gitignore
-└── README.md
+   app.py                # Streamlit frontend (UI and tabs)
+    backend/
+        __init__.py
+        data_loader.py    # Fetches and prepares stock data
+        models.py         # Machine learning forecasting model
+        risk.py           # Risk metrics (Sharpe, VaR, drawdown)
+        optimizer.py      # Portfolio allocation optimizer
+        service.py        # run_analysis: connects backend to frontend
+    requirements.txt      # Python dependencies
+    .gitignore
+    README.md
 
 ## Installation
 
