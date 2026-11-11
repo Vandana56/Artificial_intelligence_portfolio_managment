@@ -67,12 +67,11 @@ Other highlights:
 - **Visualization:** Altair, Matplotlib
 
 
-## Project Structure
 
 ## Project Structure
 
  | Path | Description |
-|-------|------|------|-------------|
+|-------|-------------|
 `ai_portfolio/` | Main project folder |
 `app.py` | Streamlit frontend (UI and the four tabs) |
  `backend/`  | All analysis logic |
