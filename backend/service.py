@@ -2,7 +2,9 @@
 import numpy as np
 import pandas as pd
 from . import data_loader, risk, models, optimizer
-
+import streamlit as st
+@st.cache_data(show_spinner=False, ttl=3600)
+def run_analysis(tickers, weights=None, years=3, rf=0.04, use_live=True):
 
 def run_analysis(tickers, weights=None, years=3, rf=0.04, use_live=True):
     prices, source = data_loader.get_prices(tickers, years, use_live)
