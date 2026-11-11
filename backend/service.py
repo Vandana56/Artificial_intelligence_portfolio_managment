@@ -10,7 +10,7 @@ def run_analysis(tickers, weights=None, years=3, rf=0.04, use_live=True):
     w = np.ones(len(tickers)) / len(tickers) if weights is None else np.asarray(weights) / np.sum(weights)
 
     per_asset = pd.DataFrame({t: risk.risk_metrics(rets[t], rf) for t in tickers}).T
-    per_asset["Risk Tier"] = models.cluster_risk_tiers(per_asset)
+    per_asset = per_asset.join(models.cluster_risk_tiers(per_asset))   # Risk Score + Risk Tier
     port_ret = risk.portfolio_returns(rets, w)
     port = risk.risk_metrics(port_ret, rf)
     forecasts = {t: models.train_direction_model(prices[t]) for t in tickers}
@@ -22,6 +22,6 @@ def run_analysis(tickers, weights=None, years=3, rf=0.04, use_live=True):
         "forecasts": forecasts, "model_name": models.MODEL_NAME,
         "max_sharpe": optimizer.optimize(rets, rf, "sharpe"),
         "min_vol": optimizer.optimize(rets, rf, "vol"),
-        "frontier": optimizer.random_frontier(rets, rf),
+        "frontier": optimizer.efficient_frontier(rets, rf),
         "corr": rets.corr(),
     }
