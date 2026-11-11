@@ -71,20 +71,20 @@ Other highlights:
 
 ## Project Structure
 
-| Level | Path | Type | Description |
+ | Path | Description |
 |-------|------|------|-------------|
-| 📁 Root | `ai_portfolio/` | Folder | Main project folder |
-| 📄 Root | `app.py` | File | Streamlit frontend (UI and the four tabs) |
-| 📁 Root | `backend/` | Folder | All analysis logic |
-| ↳ backend | `backend/__init__.py` | File | Makes `backend` a Python package |
-| ↳ backend | `backend/data_loader.py` | File | Fetches and prepares stock data |
-| ↳ backend | `backend/models.py` | File | Machine learning forecasting model (XGBoost) |
-| ↳ backend | `backend/risk.py` | File | Risk metrics (Sharpe, VaR, drawdown) |
-| ↳ backend | `backend/optimizer.py` | File | Portfolio allocation optimizer |
-| ↳ backend | `backend/service.py` | File | `run_analysis` connects backend to frontend |
-| 📄 Root | `requirements.txt` | File | Python dependencies |
-| 📄 Root | `.gitignore` | File | Files Git should ignore (for example `venv/`) |
-| 📄 Root | `README.md` | File | Project documentation |
+`ai_portfolio/` | Main project folder |
+`app.py` | Streamlit frontend (UI and the four tabs) |
+ `backend/`  | All analysis logic |
+ `backend/__init__.py` | Makes `backend` a Python package |
+`backend/data_loader.py`  | Fetches and prepares stock data |
+ `backend/models.py`  | Machine learning forecasting model (XGBoost) |
+ `backend/risk.py`  | Risk metrics (Sharpe, VaR, drawdown) |
+ `backend/optimizer.py` | Portfolio allocation optimizer |
+ `backend/service.py`| `run_analysis` connects backend to frontend |
+ `requirements.txt`  | Python dependencies |
+`.gitignore`  | Files Git should ignore (for example `venv/`) |
+| `README.md` | Project documentation |
 
 ## Installation
 
