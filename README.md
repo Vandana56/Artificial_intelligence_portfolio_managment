@@ -69,18 +69,22 @@ Other highlights:
 
 ## Project Structure
 
-ai_portfolio/
-   app.py                # Streamlit frontend (UI and tabs)
-    backend/
-        __init__.py
-        data_loader.py    # Fetches and prepares stock data
-        models.py         # Machine learning forecasting model
-        risk.py           # Risk metrics (Sharpe, VaR, drawdown)
-        optimizer.py      # Portfolio allocation optimizer
-        service.py        # run_analysis: connects backend to frontend
-    requirements.txt      # Python dependencies
-    .gitignore
-    README.md
+## Project Structure
+
+| Level | Path | Type | Description |
+|-------|------|------|-------------|
+| 📁 Root | `ai_portfolio/` | Folder | Main project folder |
+| 📄 Root | `app.py` | File | Streamlit frontend (UI and the four tabs) |
+| 📁 Root | `backend/` | Folder | All analysis logic |
+| ↳ backend | `backend/__init__.py` | File | Makes `backend` a Python package |
+| ↳ backend | `backend/data_loader.py` | File | Fetches and prepares stock data |
+| ↳ backend | `backend/models.py` | File | Machine learning forecasting model (XGBoost) |
+| ↳ backend | `backend/risk.py` | File | Risk metrics (Sharpe, VaR, drawdown) |
+| ↳ backend | `backend/optimizer.py` | File | Portfolio allocation optimizer |
+| ↳ backend | `backend/service.py` | File | `run_analysis` connects backend to frontend |
+| 📄 Root | `requirements.txt` | File | Python dependencies |
+| 📄 Root | `.gitignore` | File | Files Git should ignore (for example `venv/`) |
+| 📄 Root | `README.md` | File | Project documentation |
 
 ## Installation
 
